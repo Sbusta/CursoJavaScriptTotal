@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+    <head>
+        <Title>Juego Preguntas</Title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body onload="comenzarReloj()">
+
+        <audio id="audioFalla">
+            <source src="sounds/TP_SaveMenu_Continue_No.wav" type="audio/wav">
+            Sonido no habilitado
+        </audio>
+
+        <audio id="audioAcierto">
+            <source src="sounds/TP_SaveMenu_Continue_Yes.wav" type="audio/wav">
+            Sonido no habilitado
+        </audio>
+
+        <audio id="audioreiniciar">
+            <source src="sounds/TP_SaveMenu_SlotSelect.wav" type="audio/wav">
+            Sonido no habilitado
+        </audio>
+
+        <p>Pregunta 1</p>
+        <input type="text" id="respuesta1">
+
+        <p>Pregunta 2</p>
+        <input type="text" id="respuesta2">
+
+        <p>Pregunta 3</p>
+        <input type="text" id="respuesta3">
+
+        <p>Pregunta 4</p>
+        <input type="text" id="respuesta4">
+
+        <p>Pregunta 5</p>
+        <input type="text" id="respuesta5">
+
+        <hr>
+        <div>
+            <button class="reiniciar" onclick="reiniciar()">Reiniciar</button>
+            <button class="Listo" onclick="pararTiempo()">Listo</button>
+        </div>
+        <br>
+        <h1 id="cronometro"></h1>
+
+        <script>
+            let elementocronometro = document.getElementById("cronometro");
+            let tiempoInicial = 30;
+
+            
+            function comenzarReloj(){
+                tiempoTerminado = setTimeout(tiempoCumplido, 1000 * tiempoInicial);
+                intervaloDeTiempo = setInterval(crono, 1000);
+
+                elementocronometro.textContent = tiempoInicial.toString();
+            }
+
+            function crono(){
+                tiempoInicial = tiempoInicial - 1;
+                tiempoActual = tiempoInicial.toString()
+                elementocronometro.textContent = tiempoActual;
+            }
+            
+            function pararTiempo(){   
+                document.getElementById("audioAcierto").play();
+                clearTimeout(tiempoTerminado);
+                clearInterval(intervaloDeTiempo);
+                setTimeout(resultados,1000)
+            }
+
+            function resultados() {
+                let fecha = new Date();
+                let respuesta1 = document.getElementById("respuesta1").value;
+                let respuesta2 = document.getElementById("respuesta2").value;
+                let respuesta3 = document.getElementById("respuesta3").value;
+                let respuesta4 = document.getElementById("respuesta4").value;
+                let respuesta5 = document.getElementById("respuesta5").value;
+
+                let mensaje = fecha.toLocaleDateString("es-Es") + "\n" +
+                                "1. " + respuesta1 + "\n" +
+                                "2. " + respuesta2 + "\n" +
+                                "3. " + respuesta3 + "\n" +
+                                "4. " + respuesta4 + "\n" +
+                                "5. " + respuesta5;
+
+                alert(mensaje);
+            }
+
+            function reiniciar() {  
+                setTimeout(cosas,1000)
+                document.getElementById("audioreiniciar").play();
+                
+            }
+            
+            function cosas(){
+                location.reload();
+            }
+
+            function tiempoCumplido(){
+                clearInterval(intervaloDeTiempo);
+                elementocronometro.textContent = "GAME OVER";
+                elementocronometro.style.color = "red";
+                document.getElementById("audioFalla").play();
+            }
+        </script>
+
+    </body>
+</html> 

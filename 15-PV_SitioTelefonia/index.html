@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>CeluMax | Gestor </title>
+    <script src="https://unpkg.com/axios@1.3.4/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="consultarInventario()">
+    <div class="titulo">                       
+        <img src="logo.png" alt="logo_default_sitio"/>
+        <h1 id="titulo">CeluMax</h1>
+    </div>
+    <hr class="linea"/>
+    <h2>Gestor de Inventario</h2>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Color</th>
+                    <th>Almacenamiento</th>
+                    <th>Procesador</th>
+                </tr>
+            </thead>
+            <tbody id="tblContenido">
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <hr/>
+    <h3>Consultar Articulo</h3>
+    <div>
+        <input type="number" id="consultarId" placeholder="Id del Articulo" min="1">
+        <button onclick="consultarUnidad()">Consultar</button>
+    </div>
+    <br>
+    <div>
+        <label for="consultarName">Marca:</label>
+        <textarea id="consultarName" cols="30" rows="1"></textarea>
+    </div>
+    <div>
+        <label for="consultarModelo">Modelo:</label>
+        <textarea id="consultarModelo" cols="30" rows="1"></textarea>
+    </div>
+    <div>
+        <label for="consultarColor">Color:</label>
+        <textarea id="consultarColor" cols="30" rows="1"></textarea>
+    </div>
+    <div>
+        <label for="consultarAlmacenamiento">Almacenamiento:</label>
+        <textarea id="consultarAlmacenamiento" cols="30" rows="1"></textarea>
+    </div>
+    <div>
+        <label for="consultarProcesador">Procesador:</label>
+        <textarea id="consultarProcesador" cols="30" row=""></textarea>
+    </div>
+    <br>
+    <div>
+        <button onclick="modificarArticulo()">Modificar</button>
+        <button onclick="eliminarArticulo()" class="buttonEliminar">Eliminar Articulo</button>
+    </div>
+    <br>
+    <hr/>
+    <h3>Agregar Articulo</h3>
+    <div>
+        <input type="text" id="iputMarca" placeholder="Marca">
+        <input type="text" id="inputModelo" placeholder="Modelo">
+        <input type="text" id="inputColor" placeholder="Color">
+        <input type="text" id="inputAlmacenamiento" placeholder="Almacenamiento">
+        <input type="text" id="inputProcesador" placeholder="Procesador">
+    </div>
+    <br>
+    <button onclick="agregarArticulo()">Agregar Articulo</button>
+    <br>
+    <br>
+    <br>
+
+       
+
+</body>
+<script src="scripts.js"></script>
+</html>

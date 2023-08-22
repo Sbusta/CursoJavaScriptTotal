@@ -1,0 +1,24 @@
+.centrado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pantalla input{
+    margin: 1em 2em; 
+}
+.operaciones button{
+    padding: 1em;
+    margin: 0.15em 0em;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.resultados{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    border-width: 3px;
+    border-style: solid;
+    width: 25%;
+    margin-left: 37.5%;
+}

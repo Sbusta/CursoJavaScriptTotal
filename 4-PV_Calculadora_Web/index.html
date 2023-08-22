@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <head>
+        <Title>CalCulame</Title>
+        <link rel="stylesheet" href="style.css">
+        <script src="calculus.js"></script>
+    </head>
+    <body>
+        <div class="pantalla centrado" >
+            <input type="number" name="primer_Numero" id="primerNumero">
+            <h2 class="simbolo" id="simbolo"> | </h2>
+            <input type="number" name="segundo_Numero" id="segundoNumero">
+        </div>
+        <div class="operaciones centrado" >
+            <button onclick="calc('suma')" type="button">+</button>
+            <button onclick="calc('resta')" type="button">-</button>
+            <button onclick="calc('multi')" type="button">x</button>
+            <button onclick="calc('divide')" type="button">/</button>
+        </div>
+        <div class="operaciones centrado" >
+            <button onclick="calc('potencia')" type="button">Potencia</button>
+            <button onclick="calc('raiz')" type="button">Raiz</button>
+        </div>
+        <div class="operaciones centrado" >
+            <button onclick="calc('abs')" type="button">Absoluto</button>
+            <button onclick="calc('rand')" type="button">Random</button>
+        </div>
+        <h2 class="resultados centrado"  id="resultado">0</h2>
+        <div class="operaciones centrado" >
+            <button onclick="round()" type="button">Round</button>
+            <button onclick="round('floor')" type="button">Floor</button>
+            <button onclick="round('ceil')" type="button">Ceil</button>
+        </div>
+    </body>
+</html>

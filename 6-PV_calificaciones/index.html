@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <head>
+        <Title>Reportes Escolar</Title>
+        <link rel="stylesheet" href="style.css">
+        <script src="reportes.js"></script>
+    </head>
+    <body>
+        <div class="pantalla" >
+            <h2 class="title" id="title"> Reportes Escolar <span class="bold">Los Burros</span> </h2>
+        </div>
+        <div class="operaciones" >
+            <button onclick="mostrarLista()" type="button">Lista de Notas</button>
+            <button onclick="calcularPromedio()" type="button">Promedio</button>
+            <button onclick="notaMasAlta()" type="button">Nota más alta</button>
+            <button onclick="suspenso()" type="button">Suspenso</button>
+        </div>
+        <hr id="separador">
+            <ul id="listaDeNotas"></ul>
+        <h2 id="promedio">El Promedio es: </h2>
+        <h2 id="notaAlta">La Nota más alta es: </h2>
+        <h2 id="suspenso">Suspenso: </h2>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 40%;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+h1 { 
+    color: #ca9b00; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal; 
+    text-shadow: 0 1px 1px #7e6000; 
+}
+.espera img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+.cuadro {
+    background-color: #a8e6ff;
+    box-shadow: inset 0 0 2em #3a7891;
+    border-radius: 5%;
+    margin: 10px;
+    font-weight: bolder;
+    padding: 0.05em 0;
+    }
+
+.cuadro div {
+    margin: 20px;
+}
